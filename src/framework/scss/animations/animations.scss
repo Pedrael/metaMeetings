@@ -1,0 +1,25 @@
+@keyframes blup {
+  1% {
+    border-radius: 50%;
+  }
+  25% {
+    background: $green;
+  }
+  100% {
+    border-radius: 0%;
+    background: $green;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.5;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,35 @@
+@mixin hover($animation-name, $timing-function: $easeOutSine, $duration:1s, $fill-mode:forwards) {
+  :hover {
+    animation-name: $animation-name;
+    animation-timing-function: $timing-function;
+    animation-duration: $duration;
+    animation-fill-mode: $fill-mode;
+
+    -webkit-animation-name: $animation-name;
+    -webkit-animation-timing-function: $timing-function;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-fill-mode: $fill-mode;
+
+    transition: all $duration $timing-function;
+
+    @content;
+  }
+}
+
+@mixin animation-handler($state-name, $animation-name, $timing-function: $easeOutSine, $duration:1s, $fill-mode:forwards) {
+  .#{$state-name} {
+    animation-name: $animation-name;
+    animation-timing-function: $timing-function;
+    animation-duration: $duration;
+    animation-fill-mode: $fill-mode;
+
+    -webkit-animation-name: $animation-name;
+    -webkit-animation-timing-function: $timing-function;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-fill-mode: $fill-mode;
+
+    transition: all $duration $timing-function;
+
+    @content;
+  }
+}

@@ -1,0 +1,29 @@
+@mixin CONFIGURE-e-textbox-carcass($color, $border, $border-color, $placeholder) {
+  .textbox-carcass {
+    display: flex;
+    font-weight: 500;
+    background: transparent;
+    color: $color;
+    border-bottom: $border solid $border-color;
+    cursor: pointer;
+    @content;
+  }
+  .textbox-carcass::placeholder {
+    color: $placeholder;
+  }
+}
+
+@mixin CONFIGURE-e-textbox-regular($bg-color, $color, $border-radius, $placeholder) {
+  .textbox-regular {
+    display: flex;
+    font-weight: 500;
+    background: $bg-color;
+    color: $color;
+    border-radius: RelativeUnits($border-radius, 0.5);
+    cursor: pointer;
+    @content;
+  }
+  .textbox-carcass::placeholder {
+    color: $placeholder;
+  }
+}

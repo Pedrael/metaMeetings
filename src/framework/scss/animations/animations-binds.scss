@@ -1,0 +1,15 @@
+//types: hover, click,
+//animation-name: blup etc
+$animations-parametrs:
+
+  ('red':(
+      (
+        'animation-type': hover,
+        'animation-name': blup
+      )
+      (
+        'animation-type': hover,
+        'animation-name': blup
+      )
+    )
+);

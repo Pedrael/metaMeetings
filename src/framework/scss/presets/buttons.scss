@@ -1,0 +1,30 @@
+@mixin CONFIGURE-e-button-carcass($color, $border, $border-color, $border-radius) {
+  .button-carcass {
+    display: flex;
+    position: relative;
+    color: $color;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: $border solid $border-color;
+    border-radius: $border-radius;
+    background: transparent;
+    text-align: center;
+    cursor: pointer;
+    @content;
+  }
+}
+
+@mixin CONFIGURE-e-button-regular($color, $bg-color, $border-radius) {
+  .button-regular {
+    display: flex;
+    position: relative;
+    color: $color;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: $border-radius;
+    background: $bg-color;
+    text-align: center;
+    cursor: pointer;
+    @content;
+  }
+}

@@ -1,0 +1,110 @@
+// -c- containers
+// -e- elements
+
+
+.ROW { //constant field
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@mixin CONFIGURE-c-ROW($width, $reverse: false) { // incapsulated standart field
+  .ROW {
+    @if ($reverse == true) {
+      flex-direction: row-reverse;
+    }
+    width: RelativeUnits($width, 0.7);
+    @content; // users additional field
+  }
+}
+
+.COLUMN { //constant field
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@mixin CONFIGURE-c-COLUMN($width, $reverse: false) { // incapsulated standart field
+  .COLUMN {
+    @if ($reverse == true) {
+      flex-direction: column-reverse;
+    }
+    width: RelativeUnits($width, 0.7);
+    @content; // users additional field
+  }
+}
+
+.MAIN-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+@mixin CONFIGURE-c-MAIN-c($width, $max-width: 80vw, $reverse: false) { // incapsulated standart field
+  .MAIN-c {
+    @if ($reverse == true) {
+      flex-direction: column-reverse;
+    }
+    width: RelativeUnits($width, 0.7);
+    max-width: $max-width;
+    @content; // users additional field
+  }
+}
+
+.MAIN-l {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 0 auto;
+}
+@mixin CONFIGURE-c-MAIN-l($width, $max-width: 80vw, $reverse: false) { // incapsulated standart field
+  .MAIN-l {
+    @if ($reverse == true) {
+      flex-direction: column-reverse;
+    }
+    width: RelativeUnits($width, 0.7);
+    max-width: $max-width;
+    @content; // users additional field
+  }
+}
+
+.MAIN-r {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  margin: 0 auto;
+}
+@mixin CONFIGURE-c-MAIN-r($width, $max-width: 80vw, $reverse: false) { // incapsulated standart field
+  .MAIN-r {
+    @if ($reverse == true) {
+      flex-direction: column-reverse;
+    }
+    width: RelativeUnits($width, 0.7);
+    max-width: $max-width;
+    @content; // users additional field
+  }
+}
+
+.container-align {
+  width: fit-content;
+  * {
+    text-align: justify;
+  }
+  *:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+
+
+section {
+}
+@mixin CONFIGURE-c-SECTION() {
+  section {
+
+  }
+}
