@@ -1,5 +1,9 @@
 //segments
 @charset "UTF-8";
-@import "./../framework/scss/fonts/NeoSans.scss"; // fonts
+@import "./../framework/scss/fonts/Roboto.scss"; // fonts
 @import "./../framework/scss/main.scss"; // framework
-@import "./segments/test.scss";
+
+@import "./_colors.scss";
+@import "./segments/general.scss";
+@import "./segments/header.scss";
+@import "./segments/hero.scss";

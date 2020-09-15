@@ -76,6 +76,10 @@
   max-width: RelativeUnits($max-width, $scaler, $mode, horizontal);
 }
 
+@mixin height($min-height, $scaler: 1, $mode: desktop-middle) {
+  height: RelativeUnits($min-height, $scaler, $mode, horizontal);
+}
+
 @mixin min-height($min-height, $scaler: 1, $mode: desktop-middle) {
   min-height: RelativeUnits($min-height, $scaler, $mode, horizontal);
 }

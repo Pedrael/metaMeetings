@@ -1,0 +1,123 @@
+body {
+  @include font('Roboto', 400);
+  color: $black;
+  background: white;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  z-index: 1;
+}
+
+h2 {
+  @include FontLineSize(0.35, 0.35, 0.3, 36, 7);
+  font-weight: 500;
+}
+h3 {
+  @include FontLineSize(0.2, 0.2, 0.6, 24, 7);
+  font-weight: 400;
+}
+h4 {
+  @include FontLineSize(0.2, 0.2, 0.6, 20, 7);
+  font-weight: 400;
+}
+h5 {
+  @include FontLineSize(0.15, 0.15, 0.7, 16, 7);
+  font-weight: 400;
+}
+p, a {
+  @include FontLineSize(0.15, 0.15, 0.7, 14, 7);
+  font-weight: 400;
+}
+
+// .thin {
+//   font-weight: 100;
+// }
+// .light {
+//   font-weight: 300;
+// }
+// .regular {
+//   font-weight: 400;
+// }
+// .medium {
+//   font-weight: 500;
+// }
+// .semi-bold {
+//   font-weight: 600;
+// }
+// .bold {
+//   font-weight: 700;
+// }
+
+.button-accent {
+  background: $blue;
+  color: #fff !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include width(213, 0.5);
+  @include min-height(70, 0.5);
+  @include max-height(85, 0.5);
+  padding: 20px;
+  @include border-radius(51);
+  @include FontLineSize(0.22, 0.22, 0.56, 20, 10);
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  @include _tablet-small {
+    font-size: 14px;
+  }
+
+  &::before {
+    content: '';
+    background: #2845de;
+    position: absolute;
+    top: RelativeUnits(-141, 0.5);
+    right: RelativeUnits(-150, 0.5);
+    display: block;
+    @include width(263, 0.5);
+    @include height(167, 0.5);
+    border-radius: 50%;
+    transition: 0.5s;
+    z-index: -1;
+  }
+
+  &:hover::before {
+    background: #1d41ff;
+    height: 1000%;
+    width: 200%;
+  }
+}
+
+.-on-scale:hover {
+  animation: 0.1s ease-out 0s infinite ping;
+}
+
+.youtube-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.none {
+  display: none !important;
+}
+
+@keyframes ping { from { transform: translateX(-1px); } to { transform: translateX(1px); }  }

@@ -1,0 +1,77 @@
+#hero {
+  width: 100vw;
+  min-height: 100vh;
+  background: $l-blue;
+
+  .content {
+    @include width(1240, 0.7);
+    min-height: 100%;
+    align-items: center;
+    max-width: 90vw;
+  }
+
+  .text-segment {
+    @include width(434, 0.5);
+    text-align: justify;
+
+    h2 {
+      color: $d-blue;
+      white-space: nowrap;
+    }
+
+    .pre-text, .text-content {
+      color: $dd-blue;
+    }
+
+    .pre-text {
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include width(95, 0.2);
+      @include height(30, 0.2);
+      @include border-radius(8);
+      @include margin-padding(('m-b': (22, 0.5) ));
+    }
+
+    .hero-big {
+      @include FontLineSize(0.35, 0.35, 0.3, 64, 7);
+    }
+
+    .hero-small {
+      letter-spacing: 0.015em;
+    }
+
+    .text-content {
+      @include margin-padding(('m-t': (50, 0.5) ));
+    }
+
+    .button-accent {
+      @include margin-padding(('m-t': (50, 0.5) ));
+    }
+  }
+
+  .img-segment {
+    @include min-width(752, 0.85);
+    @include margin-padding(('m-l': (52, 0.5) ));
+  }
+
+  @include _tablet-middle {
+    .img-segment {
+      opacity: 0.4;
+      z-index: 0;
+      position: absolute;
+      right: 0;
+      width: 60vw;
+    }
+  }
+
+  @include _phone-big {
+    .img-segment {
+       display: none;
+    }
+    .content {
+      justify-content: center;
+    }
+  }
+}
