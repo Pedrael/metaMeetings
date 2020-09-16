@@ -1,0 +1,79 @@
+#reasons {
+  background: $l-blue;
+  //@include min-height(630, 0.5);
+  @include margin-padding(('p-t': (65, 0.5) ));
+
+  .reasons-content {
+    @include width(840, 0.5);
+    min-width: 90vw;
+    @include margin-padding(('m-t': (65, 0.5) ));
+  }
+
+  .thinking-girl {
+    @include width(430, 0.5);
+    background-position: right bottom;
+    //background-size: auto 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../img/thinking-girl.svg');
+    @include min-height(440, 0.5);
+
+    .big-number {
+      @include FontLineSize(0.4, 0.4, 0.2, 115, 7);
+      @include margin-padding(('m-t': (60, 0.5) ));
+    }
+
+    h4 {
+      @include FontLineSize(0.2, 0.2, 0.6, 18, 3);
+    }
+
+    h2, h4 {
+      color: $dd-blue;
+    }
+  }
+
+  .text-content {
+    @include width(430, 0.5);
+    @include margin-padding(('m-l': (30, 0.5) ));
+
+    h3, p { color: $dd-blue; }
+
+    h3 {
+      @include margin-padding(('m-b': (30, 0.5) ));
+    }
+
+    p {
+      display: flex;
+      @include margin-padding(('m-b': (19, 0.5) ));
+    }
+
+    .list {
+      @include margin-padding(('m-b': (19, 0.5) ));
+    }
+
+    p:before {
+      content: '';
+      display: block;
+      border: 3px solid #9C91F2;
+      box-sizing: border-box;
+      border-radius: 50%;
+      @include min-width(17, 0.3);
+      @include height(17, 0.3);
+      @include margin-padding(('m-r': (15, 0.5), 'm-t': (3, 0) ));
+    }
+  }
+
+  @include _tablet-small {
+
+    .reasons-content {
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 40px;
+    }
+
+    .thinking-girl, .text-content {
+      width: 70vw;
+    }
+
+  }
+}

@@ -1,7 +1,6 @@
 body {
   @include font('Roboto', 400);
-  color: $black;
-  background: white;
+  background: $gray;
 }
 
 img {
@@ -17,6 +16,7 @@ img {
 h2 {
   @include FontLineSize(0.35, 0.35, 0.3, 36, 7);
   font-weight: 500;
+  color: $dd-blue;
 }
 h3 {
   @include FontLineSize(0.2, 0.2, 0.6, 24, 7);
@@ -35,24 +35,15 @@ p, a {
   font-weight: 400;
 }
 
-// .thin {
-//   font-weight: 100;
-// }
-// .light {
-//   font-weight: 300;
-// }
-// .regular {
-//   font-weight: 400;
-// }
-// .medium {
-//   font-weight: 500;
-// }
-// .semi-bold {
-//   font-weight: 600;
-// }
-// .bold {
-//   font-weight: 700;
-// }
+.dd-blue {
+  color: $dd-blue;
+}
+
+.d-gray {
+  color: $d-gray;
+}
+
+
 
 .button-accent {
   background: $blue;
@@ -96,6 +87,16 @@ p, a {
     background: #1d41ff;
     height: 1000%;
     width: 200%;
+  }
+}
+
+.title {
+  .deco-capsule {
+    @include margin-padding(('m-b': (20, 0.5) ));
+    @include width(31, 0.2);
+    @include height(7, 0.2);
+    @include border-radius(7);
+    background: linear-gradient(90deg, #3083FF 0%, #8FC9FF 140.32%);
   }
 }
 

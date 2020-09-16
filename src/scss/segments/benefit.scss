@@ -1,0 +1,70 @@
+#benefit {
+  @include margin-padding(('p-t': (65, 0.5), 'p-b': (85, 0.5) ));
+
+  .people-array {
+    @include width(1600, 0.7);
+    max-width: 90vw;
+    @include margin-padding(('m-t': (55, 0.5) ));
+
+    .item {
+      @include width(285, 0.3);
+      @include height(215, 0.3);
+      position: relative;
+      margin: 10px;
+
+      p {
+        color: $dd-blue;
+        @include margin-padding(('m-t': (25, 0.3), 'm-l': (18, 0.3) ));
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-position: right;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+      }
+    }
+
+    #benefit1:after {
+      background-image: url('../img/benefit/1.svg');
+    }
+    #benefit2:after {
+      background-image: url('../img/benefit/2.svg');
+    }
+    #benefit3:after {
+      background-image: url('../img/benefit/3.svg');
+    }
+    #benefit4:after {
+      background-image: url('../img/benefit/4.svg');
+    }
+
+    .rect {
+      @include height(167, 0.3);
+      width: 100%;
+      background: #fff;
+      @include border-radius(9);
+      z-index: 0;
+    }
+  }
+
+  .also-array {
+    width: 90vw;
+    @include margin-padding(('m-t': (55, 0.5) ));
+
+    h5 {
+      @include max-width(320, 0.3);
+      @include margin-padding(('m-r': (35, 0.5), 'm-l': (35, 0.5) ));
+    }
+
+    @include _tablet-semi-middle {
+      flex-direction: column;
+      align-items: center;
+
+      h5 { margin-bottom: 20px; text-align: center; }
+    }
+  }
+}
