@@ -1,0 +1,59 @@
+#surround {
+  @include margin-padding(('p-t': (65, 0.5), 'p-b': (85, 0.5) ));
+  background: $l-blue;
+
+  .items-array, .under {
+    @include width(1200, 0.7);
+    max-width: 80vw;
+    @include margin-padding(('m-t': (35, 0.5), 'm-b': (25, 0.5) ));
+  }
+
+  .item {
+    @include width(239, 0.3);
+    @include min-height(199, 0.3);
+    background-position: bottom center;
+    background-color: #fff;
+    @include border-radius(10);
+    background-repeat: no-repeat;
+    margin: 18px;
+
+    h5 {
+      @include margin-padding(('m-t': (30, 0.3) ));
+      text-align: center;
+    }
+  }
+
+  #sur1 {
+    background-image: url('../img/surround/1.png');
+    background-size: 45% auto;
+  }
+  #sur2 {
+    background-image: url('../img/surround/2.png');
+    background-size: 55% auto;
+  }
+  #sur3 {
+    background-image: url('../img/surround/3.png');
+    background-size: 55% auto;
+  }
+  #sur4 {
+    background-image: url('../img/surround/4.png');
+    background-size: 100% auto;
+  }
+  #sur5 {
+    background-image: url('../img/surround/5.png');
+    background-size: 85% auto;
+  }
+  #sur6 {
+    background-image: url('../img/surround/6.png');
+    background-size: 50% auto;
+  }
+  #sur7 {
+    background-image: url('../img/surround/7.png');
+    background-size: 55% auto;
+  }
+  #sur-button {
+    .button-accent-small {
+      @include margin-padding(('m-t': (35, 0.3) ));
+    }
+  }
+}

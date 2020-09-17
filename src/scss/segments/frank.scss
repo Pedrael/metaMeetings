@@ -31,7 +31,7 @@
 
   .w-frank {
     .img-wrap {
-      @include width(414, 0.6);
+      @include width(414.1, 0.6);
       @include margin-padding(('m-b': (55, 0.5) ));
     }
     h5 { text-align: center; }

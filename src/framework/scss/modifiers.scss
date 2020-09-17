@@ -379,25 +379,25 @@
 	right: 0;
 }
 
-@for $i from 1 to 50 {
+@for $i from 1 to 101 {
 	.bot-#{$i} {
 		bottom: calc(#{$i} * 1%);
 	}
 }
 
-@for $i from 1 to 50 {
+@for $i from 1 to 101 {
 	.top-#{$i} {
 		top: calc(#{$i} * 1%);
 	}
 }
 
-@for $i from 1 to 50 {
+@for $i from 1 to 101 {
 	.left-#{$i} {
 		left: calc(#{$i} * 1%);
 	}
 }
 
-@for $i from 1 to 50 {
+@for $i from 1 to 101 {
 	.right-#{$i} {
 		right: calc(#{$i} * 1%);
 	}

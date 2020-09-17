@@ -45,27 +45,50 @@ p, a {
   color: $d-gray;
 }
 
-
-
 .button-accent {
+  @include width(213, 0.5);
+  @include min-height(70, 0.5);
+  @include max-height(85, 0.5);
+  @include border-radius(51);
+  @include FontLineSize(0.22, 0.22, 0.56, 20, 10);
+
+  &:before {
+    top: RelativeUnits(-141, 0.5);
+    right: RelativeUnits(-150, 0.5);
+    @include width(263, 0.5);
+    @include height(167, 0.5);
+  }
+}
+
+.button-accent-small {
+  @include width(166, 0.3);
+  @include min-height(55, 0.3);
+  @include max-height(65, 0.3);
+  @include border-radius(51);
+  @include FontLineSize(0.15, 0.15, 0.7, 16, 7);
+
+  &:before {
+    top: RelativeUnits(-151, 0.3);
+    right: RelativeUnits(-170, 0.3);
+    @include width(283, 0.3);
+    @include height(177, 0.3);
+  }
+}
+
+.button-accent, .button-accent-small {
   background: $blue;
   color: #fff !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  @include width(213, 0.5);
-  @include min-height(70, 0.5);
-  @include max-height(85, 0.5);
   padding: 20px;
-  @include border-radius(51);
-  @include FontLineSize(0.22, 0.22, 0.56, 20, 10);
-  font-weight: 500;
   text-align: center;
   text-decoration: none;
   color: inherit;
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  font-weight: 500;
 
   @include _tablet-small {
     font-size: 14px;
@@ -75,11 +98,7 @@ p, a {
     content: '';
     background: #2845de;
     position: absolute;
-    top: RelativeUnits(-141, 0.5);
-    right: RelativeUnits(-150, 0.5);
     display: block;
-    @include width(263, 0.5);
-    @include height(167, 0.5);
     border-radius: 50%;
     transition: 0.5s;
     z-index: -1;
@@ -88,7 +107,7 @@ p, a {
   &:hover::before {
     background: #1d41ff;
     height: 1000%;
-    width: 200%;
+    width: 220%;
   }
 }
 
@@ -124,8 +143,8 @@ p, a {
   position: relative;
 
   .video-itself {
-    @include width(845, 0.5);
-    padding-top: RelativeUnits(475, 0.5);
+    @include width(845, 0.8);
+    padding-top: RelativeUnits(475, 0.8);
     @include border-radius(29);
     overflow: hidden;
     position: relative;
@@ -135,21 +154,27 @@ p, a {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 7px;
-    background: $dd-blue;
-    @include width(500, 0.5);
+    @include width(500, 0.7);
     @include height(65, 0.5);
     position: absolute;
     top: RelativeUnits(-35, 0.5);
     left: -5px;
     z-index: 2;
-    h3 { color: #fff; }
+    h3 {
+      color: #fff;
+      @include FontLineSize(0.35, 0.35, 0.3, 24, 7);
+    }
 
-    // &:before {
-    //   display: block;
-    //   content: '';
-    //   // TODO
-    // }
+      &:before {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: skewX(-25deg);
+        @include border-radius(7);
+        background: #545C94;
+        content: '';
+      }
     }
 
   iframe {

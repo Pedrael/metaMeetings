@@ -10,13 +10,15 @@
   }
 
   .thinking-girl {
-    @include width(430, 0.5);
+    @include width(430.1, 0.5);
     background-position: right bottom;
     //background-size: 100% auto;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url('../img/thinking-girl.svg');
-    @include min-height(440, 0.5);
+    background-image: url('../img/thinking-girl.png');
+    @include min-height(440.1, 0.5);
+    @include max-height(440.1, 0.5);
+    align-self: flex-end;
 
     .big-number {
       @include FontLineSize(0.4, 0.4, 0.2, 115, 7);
@@ -72,6 +74,10 @@
 
     .thinking-girl, .text-content {
       width: 70vw;
+    }
+
+    .thinking-girl {
+      background-image: url('../img/thinking-girl-mobile.png');
     }
 
   }

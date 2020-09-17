@@ -1,0 +1,114 @@
+#content-development {
+  @include margin-padding(('p-t': (65, 0.5), 'p-b': (85, 0.5) ));
+  z-index: 2;
+  position: relative;
+
+  .content-w-girl {
+    @include margin-padding(('m-t': (50, 0.5) ));
+    @include width(1400, 0.5);
+    @include min-height(700, 0.5);
+    max-width: 90vw;
+    position: relative;
+    background-image: url('../img/thinking-girl-2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .meta h2 {
+    color: $blue;
+    @include FontLineSize(0.45, 0.45, 0.1, 36, 7);
+    padding: RelativeUnits(20, 0.4) RelativeUnits(40, 0.4);
+    @include border-radius(75);
+    background: #fff;
+    @include height(75, 0.4);
+  }
+
+  $item-s: 0.19;
+
+  .item {
+    border: 1px solid #fff;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include height(65, $item-s);
+    @include width(224, $item-s);
+    background: #fff;
+    @include border-radius(15);
+    overflow: hidden;
+
+    .item-title, .item-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+    }
+
+    .item-title {
+      @include height(65, $item-s);
+      cursor: pointer;
+    }
+
+    .item-text { display: none; padding: 0 10px; }
+
+    &:hover, &:active {
+      user-select: none;
+      border: 1px solid $blue;
+      @include height(207, $item-s);
+
+      .item-title {
+        background: $blue;
+        color: #fff;
+        font-weight: 700;
+      }
+
+      .item-text {
+        @include height(142, $item-s);
+        display: flex;
+        background: $l-blue;
+      }
+    }
+  }
+
+  @include _tablet-middle {
+    .content-w-girl {
+      background: none;
+    }
+    .item, .meta {
+      position: relative;
+      top: auto;
+      left: auto;
+      bottom: auto;
+      right: auto;
+    }
+
+    .meta {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .item {
+      user-select: none;
+      border: 1px solid $blue;
+      @include height(207, $item-s);
+      margin: 20px;
+
+      &:hover, &:active {}
+
+      .item-title {
+        background: $blue;
+        font-weight: 700;
+        color: #fff;
+      }
+
+      .item-text {
+        @include height(142, $item-s);
+        display: flex;
+        background: $l-blue;
+        padding: 0 10px;
+      }
+    }
+  }
+}

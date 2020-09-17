@@ -1,0 +1,45 @@
+#format {
+  @include margin-padding(('p-t': (65, 0.5), 'p-b': (90, 0.5) ));
+  background: #fff;
+
+  .content-segment {
+    @include margin-padding(('m-t': (65, 0.5) ));
+    @include width(1100, 0.5);
+    max-width: 80vw;
+  }
+
+  .text-section {
+    @include min-width(500, 0.8);
+    @include width(600, 0.8);
+
+    h3 {
+      @include margin-padding(('m-b': (25, 0.5) ));
+    }
+    h5 {
+      color: $d-gray;
+    }
+  }
+
+  .img-section {
+    @include min-width(376, 0.7);
+    @include width(376, 0.7);
+  }
+
+  @include _tablet-small {
+    .content-segment {
+      flex-direction: column;
+      &:nth-child(2) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    .text-section {
+      width: 75vw;
+      text-align: center;
+    }
+
+    .img-section {
+      margin: 20px 0;
+    }
+  }
+}
