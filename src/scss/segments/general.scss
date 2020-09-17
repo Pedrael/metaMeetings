@@ -13,6 +13,8 @@ img {
   z-index: 1;
 }
 
+h2, h3, h4, h5, a, p { color: $dd-blue; }
+
 h2 {
   @include FontLineSize(0.35, 0.35, 0.3, 36, 7);
   font-weight: 500;
@@ -27,7 +29,7 @@ h4 {
   font-weight: 400;
 }
 h5 {
-  @include FontLineSize(0.15, 0.15, 0.7, 16, 7);
+  @include FontLineSize(0.18, 0.18, 0.64, 16, 7);
   font-weight: 400;
 }
 p, a {
@@ -91,6 +93,7 @@ p, a {
 }
 
 .title {
+  max-width: 90vw;
   .deco-capsule {
     @include margin-padding(('m-b': (20, 0.5) ));
     @include width(31, 0.2);
@@ -98,10 +101,65 @@ p, a {
     @include border-radius(7);
     background: linear-gradient(90deg, #3083FF 0%, #8FC9FF 140.32%);
   }
+
+  .framed {
+    color: $blue !important;
+    border: 1px solid #4360FB;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include min-width(51, 0.2);
+    @include height(49, 0.2);
+    @include margin-padding(('m-r': (18, 0.2) ));
+    border-radius: RelativeUnits(6, 0.2) RelativeUnits(22, 0.2) RelativeUnits(6, 0.2) RelativeUnits(22, 0.2);
+  }
 }
 
 .-on-scale:hover {
   animation: 0.1s ease-out 0s infinite ping;
+}
+
+.video-container {
+  position: relative;
+
+  .video-itself {
+    @include width(845, 0.5);
+    padding-top: RelativeUnits(475, 0.5);
+    @include border-radius(29);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .video-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    background: $dd-blue;
+    @include width(500, 0.5);
+    @include height(65, 0.5);
+    position: absolute;
+    top: RelativeUnits(-35, 0.5);
+    left: -5px;
+    z-index: 2;
+    h3 { color: #fff; }
+
+    // &:before {
+    //   display: block;
+    //   content: '';
+    //   // TODO
+    // }
+    }
+
+  iframe {
+    border: 0;
+    height: 101%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 101%;
+  }
 }
 
 .youtube-container {

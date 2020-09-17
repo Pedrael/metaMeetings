@@ -1,0 +1,47 @@
+#frank {
+  @include margin-padding(('p-t': (65, 0.5), 'p-b': (85, 0.5) ));
+
+  .frank-list {
+    @include margin-padding(('m-t': (80, 0.5) ));
+    @include width(1220, 0.5);
+    max-width: 90vw;
+  }
+
+  .circle {
+    font-size: RelativeUnits(13, 0.3);
+    color: $purple;
+    @include min-width(30, 0.3);
+    @include height(30, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid $purple;
+    @include margin-padding(('m-r': (15, 0.5) ));
+  }
+
+  .list {
+    flex-grow: 1;
+
+    h5 {
+      @include margin-padding(('m-b': (70, 0.5) ));
+      @include max-width(245, 0.29);
+    }
+  }
+
+  .w-frank {
+    .img-wrap {
+      @include width(414, 0.6);
+      @include margin-padding(('m-b': (55, 0.5) ));
+    }
+    h5 { text-align: center; }
+  }
+
+  @include _tablet-semi-middle {
+    .w-frank {
+      order: 3;
+      flex-grow: 2;
+      min-width: 100%;
+    }
+  }
+}

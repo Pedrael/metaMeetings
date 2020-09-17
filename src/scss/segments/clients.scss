@@ -1,0 +1,40 @@
+#clients {
+  @include margin-padding(('p-t': (65, 0.5), 'p-b': (85, 0.5) ));
+  background: #fff;
+
+  .banner {
+    @include width(1300, 0.5);
+    @include margin-padding(('m-t': (65, 0.5) ));
+    max-width: 80vw;
+
+    .img-wrap {
+      flex-grow: 1;
+      margin: 10px;
+    }
+
+    #cl1 {
+      @include min-width(110, 0.5);
+      @include max-width(110, 0.5);
+    }
+    #cl2 {
+      @include min-width(173, 0.5);
+      @include max-width(173, 0.5);
+    }
+    #cl3 {
+      @include min-width(209, 0.5);
+      @include max-width(209, 0.5);
+    }
+    #cl4 {
+      @include min-width(185, 0.5);
+      @include max-width(185, 0.5);
+    }
+    #cl5 {
+      @include min-width(158, 0.5);
+      @include max-width(158, 0.5);
+    }
+    #cl6 {
+      @include min-width(167, 0.5);
+      @include max-width(167, 0.5);
+    }
+  }
+}

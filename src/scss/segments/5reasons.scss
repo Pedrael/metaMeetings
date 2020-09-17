@@ -12,7 +12,7 @@
   .thinking-girl {
     @include width(430, 0.5);
     background-position: right bottom;
-    //background-size: auto 100%;
+    //background-size: 100% auto;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url('../img/thinking-girl.svg');
@@ -34,7 +34,7 @@
 
   .text-content {
     @include width(430, 0.5);
-    @include margin-padding(('m-l': (30, 0.5) ));
+    @include margin-padding(('m-l': (30, 0.5), 'p-b': (70, 0.5) ));
 
     h3, p { color: $dd-blue; }
 
@@ -68,7 +68,6 @@
     .reasons-content {
       flex-direction: column;
       align-items: center;
-      padding-bottom: 40px;
     }
 
     .thinking-girl, .text-content {
