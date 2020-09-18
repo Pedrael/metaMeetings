@@ -1,0 +1,53 @@
+#answers {
+  @include margin-padding(('p-t': (65, 0.5), 'p-b': (85, 0.5) ));
+  background: #fff;
+
+  .title {
+    @include margin-padding(('m-b': (30, 0.5) ));
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+
+  .button-accent-small {
+    @include min-width(271, 0.3);
+    @include margin-padding(('m-t': (45, 0.5) ));
+  }
+
+  .accordeon-item {
+    border: 1px solid #D7DDFE;
+    @include border-radius(8);
+    padding: RelativeUnits(20, 0.3) RelativeUnits(40, 0.3);
+    @include width(777, 0.7);
+    max-width: 80vw;
+    margin: 5px 0;
+
+    .img-wrap {
+      @include width(19, 0.2);
+      @include height(19, 0.2);
+    }
+
+    p {
+      @include margin-padding(('m-t': (20, 0.3) ));
+      @include FontLineSize(0.15, 0.15, 0.7, 13, 10);
+      font-weight: 300;
+    }
+
+    p, .minus {
+      display: none;
+    }
+  }
+
+  .accordeon-item.selected {
+    box-shadow: 0px 0px 14px #DDE2FF;
+
+    p, .minus {
+      display: block;
+    }
+
+    .plus {
+      display: none;
+    }
+  }
+}
