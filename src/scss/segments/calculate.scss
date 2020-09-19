@@ -1,0 +1,158 @@
+#calculate {
+  @include margin-padding(('p-t': (65, 0.5), 'p-b': (85, 0.5) ));
+  @include min-height(1000, 1);
+  background-image:  url('../img/Line.svg'), url('../img/calculate.png');
+  background-size: contain, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center 60%, center center;
+  position: relative;
+
+  .title {
+    h5 {
+      @include margin-padding(('m-l': (69, 0.2) ));
+      @include max-width(780, 0.5);
+      //text-align: center;
+    }
+    .deco-capsule { align-self: center; }
+  }
+
+  .number-container, .text-container {
+    position: absolute;
+  }
+
+  .text-container {
+    background: #fff;
+    padding: RelativeUnits(22, 0.4);
+    @include width(312, 0.2);
+    bottom: 2%;
+    left: 35%;
+    @include border-radius(36);
+  }
+
+  .number-container {
+    text-align: center;
+
+    h2, input {
+      @include FontLineSize(0.45, 0.45, 0.1, 47, 7);
+    }
+
+    input:disabled {
+      background: #fff;
+    }
+
+        /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+
+    h5 {
+      @include FontLineSize(0.45, 0.45, 0.1, 16, 7);
+    }
+
+    h5, h2, input {
+      margin-bottom: RelativeUnits(10, 0.1);
+      font-weight: 400;
+    }
+
+    input {
+      color: $blue;
+      border: 1px solid #B0BBFB;
+      @include border-radius(18);
+      padding: RelativeUnits(10, 1);
+      max-width: min-content;
+      max-width: -moz-min-content;
+      max-width: -webkit-min-content;
+      text-align: center;
+    }
+  }
+
+  #month {
+    left: 16.5%;
+    bottom: 35.5%;
+  }
+
+  #num1 {
+    bottom: 47%;
+    left: 38%;
+  }
+
+  #num2 {
+    bottom: 37%;
+    left: 58%;
+  }
+
+  #num3 {
+    bottom: 47%;
+    right: 16%;
+  }
+
+  @include _tablet-big {
+    background: url('../img/calculate.png');
+    background-size: cover;
+    background-position: center center;
+
+    &:after {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.5);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      display: block;
+      content: '';
+    }
+
+    .numbers {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 80vw;
+      margin-top: RelativeUnits(85, 0.5);
+    }
+
+    .number-container, #num1, #num2, #num3, #month, .text-container {
+      position: relative;
+      left: auto;
+      bottom: auto;
+      right: auto;
+      top: auto;
+    }
+
+    .text-container {
+      width: 80vw;
+      margin-top: 20px;
+    }
+  }
+
+  @include _phone-big {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-color: #fff;
+
+    &:after {
+      background: transparent;
+    }
+
+    .number-container {
+      width: calc(40vw - 20px);
+      margin: 10px;
+      h2, input {
+        font-size: 24px;
+        line-height: 30px;
+      }
+      h5 {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+}

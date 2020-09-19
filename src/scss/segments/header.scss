@@ -1,12 +1,15 @@
-header {
+#header, #footer {
   @include min-height(120, 0.3);
   width: 100vw;
   background: transparent;
-  position: absolute;
   @include margin-padding(('p-l': (200, 1), 'p-r': (200, 1) ));
   z-index: 9;
 
+  h4 { white-space: nowrap; }
+
   h4, p, a { color: black; }
+
+  p { text-align: center; }
 
   .phone-button {
     border: 2px solid $blue;
@@ -17,6 +20,7 @@ header {
     border-radius: RelativeUnits(60, 0.5);
     font-weight: 500;
     color: #000;
+    white-space: nowrap;
 
     &:visited {
       color: #000;
@@ -27,16 +31,39 @@ header {
     @include margin-padding(('m-r': (55, 0.7) ));
   }
 
+  @include _tablet-big {
+    h4 { font-size: 14px; }
+    .group {
+      p { max-width: 200px; }
+    }
+  }
+
   @include _tablet-middle {
-    //flex-wrap: wrap;
-    white-space: nowrap;
+    .group {
+      p { max-width: 150px; }
+    }
+    h4 { font-size: 12px; }
+  }
+
+  @include _tablet-small {
     .group {
       p { display: none; }
     }
   }
 
-  @include _tablet-small {
-    h4 { font-size: 12px; }
+  @include _phone-big {
+    .group {
+      width: 120px;
+      flex-wrap: wrap;
+      a, h4 { flex-grow: 1; }
+      h4 {
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+      .phone-button { margin: 0; }
+
+    }
   }
 
 }
