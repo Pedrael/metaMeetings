@@ -2,7 +2,9 @@ function toggleAccordeon() {
   let items = document.querySelectorAll('.accordeon-item')
   items.forEach((item) => {
     item.addEventListener('click', (e) => {
-      console.log(e.currentTarget)
+      items.forEach(i => {
+        if(i != e.currentTarget) i.classList.remove('selected')
+      })
       e.currentTarget.classList.toggle('selected')
     })
   })

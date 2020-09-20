@@ -27,19 +27,26 @@
         background-size: auto 100%;
         background-repeat: no-repeat;
       }
+
+      &:hover {
+        transform: translateY(-6px);
+        .rect {
+          box-shadow: 0px 0px 14px #DDE2FF;
+        }
+      }
     }
 
     #benefit1:after {
-      background-image: url('../img/benefit/1.svg');
+      background-image: url('../img/benefit/1.png');
     }
     #benefit2:after {
-      background-image: url('../img/benefit/2.svg');
+      background-image: url('../img/benefit/2.png');
     }
     #benefit3:after {
-      background-image: url('../img/benefit/3.svg');
+      background-image: url('../img/benefit/3.png');
     }
     #benefit4:after {
-      background-image: url('../img/benefit/4.svg');
+      background-image: url('../img/benefit/4.png');
     }
 
     .rect {

@@ -17,6 +17,11 @@
     background-repeat: no-repeat;
     margin: 18px;
 
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0px 0px 14px #bbc3f0;
+    }
+
     h5 {
       @include margin-padding(('m-t': (30, 0.3) ));
       text-align: center;

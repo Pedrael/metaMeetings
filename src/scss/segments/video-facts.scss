@@ -4,8 +4,14 @@
   background-repeat: no-repeat, no-repeat;
   background-position: left center, right center;
   background-size: auto 80%, auto 80%;
+  animation: 1.5s ease-out 0s infinite alternate bg-move;
 
   @include _tablet-small {
     background: none, none;
   }
+
+  @keyframes bg-move {
+    from { background-position: left 59%, right 41%; }
+    to { background-position: left 41%, right 59%; }  }
+
 }
