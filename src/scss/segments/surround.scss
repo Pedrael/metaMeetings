@@ -3,8 +3,8 @@
   background: $l-blue;
 
   .items-array, .under {
-    @include width(1200, 0.7);
-    max-width: 80vw;
+    @include width(1200, 0.3);
+    max-width: 90vw;
     @include margin-padding(('m-t': (35, 0.5), 'm-b': (25, 0.5) ));
   }
 

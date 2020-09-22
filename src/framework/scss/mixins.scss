@@ -416,6 +416,8 @@
 
 @mixin border-radius($radius) {
   border-radius: RelativeUnitsComplex($radius, 0.2, 0.2);
+  -moz-border-radius: RelativeUnitsComplex($radius, 0.2, 0.2);
+  -webkit-border-radius: RelativeUnitsComplex($radius, 0.2, 0.2);
 }
 
 //-transforms

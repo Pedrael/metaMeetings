@@ -26,7 +26,11 @@
 
   .image-section {
     //@include min-width(600, 0.8);
-    @include width(600, 0.8);
+    @include width(700, 0.5);
+
+    @include _tablet-semi-middle {
+      @include width(600, 0.7);
+    }
   }
 
   @include _tablet-small {

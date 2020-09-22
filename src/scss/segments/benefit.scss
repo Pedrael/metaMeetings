@@ -63,7 +63,7 @@
     @include margin-padding(('m-t': (55, 0.5) ));
 
     h5 {
-      @include max-width(320, 0.3);
+      @include max-width(360, 0.2);
       @include margin-padding(('m-r': (35, 0.5), 'm-l': (35, 0.5) ));
     }
 

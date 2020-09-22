@@ -10,14 +10,14 @@
   }
 
   .thinking-girl {
-    @include width(430.1, 0.5);
+    @include width(530.1, 0.5);
     background-position: right bottom;
     //background-size: 100% auto;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url('../img/thinking-girl.png');
-    @include min-height(440.1, 0.5);
-    @include max-height(440.1, 0.5);
+    @include min-height(550.1, 0.5);
+    @include max-height(550.1, 0.5);
     align-self: flex-end;
 
     .big-number {
@@ -36,7 +36,8 @@
 
   .text-content {
     @include width(430, 0.5);
-    @include margin-padding(('m-l': (30, 0.5), 'p-b': (70, 0.5) ));
+    //@include margin-padding(('m-l': (30, 0.5), 'p-b': (70, 0.5) ));
+    @include margin-padding(('m-l': (30, 0.5) ));
 
     h3, p { color: $dd-blue; }
 
@@ -79,6 +80,10 @@
 
     .thinking-girl {
       background-image: url('../img/thinking-girl-mobile.png');
+    }
+
+    .text-content {
+      @include margin-padding(('p-b': (70, 0.5) ));
     }
 
   }

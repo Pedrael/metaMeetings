@@ -1,5 +1,5 @@
 #frank {
-  @include margin-padding(('p-t': (65, 0.5), 'p-b': (85, 0.5) ));
+  @include margin-padding(('p-t': (65, 0.5), 'p-b': (165, 0.5) ));
 
   .frank-list {
     @include margin-padding(('m-t': (80, 0.5) ));
@@ -30,6 +30,7 @@
   }
 
   .w-frank {
+    @include margin-padding(('m-b': (-80, 0.5) ));
     .img-wrap {
       @include width(414.1, 0.6);
       @include margin-padding(('m-b': (55, 0.5) ));

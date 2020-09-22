@@ -26,7 +26,7 @@
     @include width(312, 0.2);
     bottom: 2%;
     left: 35%;
-    @include border-radius(36);
+    border-radius: RelativeUnits(36, 0.49);
   }
 
   .number-container {
@@ -34,6 +34,10 @@
 
     h2, input {
       @include FontLineSize(0.45, 0.45, 0.1, 47, 7);
+    }
+
+    input {
+      @include width(89, 0.49);
     }
 
     input:disabled {

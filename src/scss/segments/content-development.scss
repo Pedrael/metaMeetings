@@ -37,6 +37,7 @@
     background: #fff;
     @include border-radius(15);
     overflow: hidden;
+    box-sizing: border-box;
 
     .item-title, .item-text {
       display: flex;
@@ -44,11 +45,13 @@
       justify-content: center;
       text-align: center;
       width: 100%;
+      box-sizing: border-box;
     }
 
     .item-title {
       @include height(65, $item-s);
       cursor: pointer;
+      width: 101%;
     }
 
     .item-text { display: none; padding: 0 10px; }
@@ -73,6 +76,9 @@
   }
 
   @include _tablet-middle {
+    .title .-text-c {
+      text-align: left;
+    }
     .content-w-girl {
       background: none;
     }
