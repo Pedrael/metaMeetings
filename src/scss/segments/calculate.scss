@@ -1,7 +1,7 @@
 #calculate {
   @include margin-padding(('p-t': (65, 0.5), 'p-b': (85, 0.5) ));
   @include min-height(1000, 1);
-  background-image:  url('../img/Line.svg'), url('../img/calculate.png');
+  background-image:  url('../img/Line.svg'), url('../img/calculate.jpg');
   background-size: contain, cover;
   background-repeat: no-repeat, no-repeat;
   background-position: center 60%, center center;

@@ -1,3 +1,5 @@
+var SmoothScroll = require('smooth-scroll')
+
 function toggleAccordeon() {
   let items = document.querySelectorAll('.accordeon-item')
   items.forEach((item) => {
@@ -21,3 +23,8 @@ function toggleAccordeon() {
 }
 
 toggleAccordeon()
+
+var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 900,
+    speedAsDuration: true
+})
