@@ -38,20 +38,22 @@
     @include border-radius(15);
     overflow: hidden;
     box-sizing: border-box;
+    outline: none;
+
 
     .item-title, .item-text {
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      width: 100%;
+      width: 101%;
       box-sizing: border-box;
+      outline: none;
     }
 
     .item-title {
       @include height(65, $item-s);
       cursor: pointer;
-      width: 101%;
     }
 
     .item-text { display: none; padding: 0 10px; }
