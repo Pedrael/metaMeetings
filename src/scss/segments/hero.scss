@@ -67,11 +67,14 @@
   }
 
   @include _phone-big {
+    min-height: 500px;
+    align-items: center;
     .img-segment {
        display: none;
     }
     .content {
       justify-content: center;
+      margin-top: 50px;
     }
   }
 }
