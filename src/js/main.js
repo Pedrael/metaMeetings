@@ -45,11 +45,14 @@ function calculateValues() {
   let button = document.querySelector('#jscalcbtn')
   button.onclick = function(e) {
     e.preventDefault()
-    smoothCalc(document.querySelector('#jscalcv1').innerHTML, v * 4, '#jscalcv1')
-    smoothCalc(document.querySelector('#jscalcv2').innerHTML, v * 2, '#jscalcv2')
-    smoothCalc(document.querySelector('#jscalcv3').innerHTML, v * 2, '#jscalcv3')
+    // 1 = 4.33 и 2.16 и 2.16
+    smoothCalc(document.querySelector('#jscalcv1').innerHTML, Math.round(v * 4.33), '#jscalcv1')
+    smoothCalc(document.querySelector('#jscalcv2').innerHTML, Math.round(v * 2.16), '#jscalcv2')
+    smoothCalc(document.querySelector('#jscalcv3').innerHTML, Math.round(v * 2.16), '#jscalcv3')
   }
-
+  smoothCalc(document.querySelector('#jscalcv1').innerHTML, Math.round(v * 4.33), '#jscalcv1')
+  smoothCalc(document.querySelector('#jscalcv2').innerHTML, Math.round(v * 2.16), '#jscalcv2')
+  smoothCalc(document.querySelector('#jscalcv3').innerHTML, Math.round(v * 2.16), '#jscalcv3')
 }
 
 toggleAccordeon()

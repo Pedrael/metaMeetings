@@ -44,6 +44,7 @@
 
     .text-content {
       @include margin-padding(('m-t': (50, 0.5) ));
+      text-align: left;
     }
 
     .button-accent {
