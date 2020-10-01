@@ -1,4 +1,5 @@
 var SmoothScroll = require('smooth-scroll')
+var axios = require('axios')
 
 function toggleAccordeon() {
   let items = document.querySelectorAll('.accordeon-item')
@@ -23,7 +24,7 @@ function toggleAccordeon() {
 }
 
 function smoothCalc(oldV, newV, link) {
-  console.log(oldV, newV)
+
   if(oldV == newV) return;
   let dif = Math.abs(oldV - newV)
   let iii = setInterval(() => {
@@ -55,8 +56,28 @@ function calculateValues() {
   smoothCalc(document.querySelector('#jscalcv3').innerHTML, Math.round(v * 2.16), '#jscalcv3')
 }
 
+function calculatePricesDollar() {
+  axios.get('https://www.cbr-xml-daily.ru/daily_json.js').then((data) => {
+    let dollar = data.data.Valute.USD.Value
+    let list = document.querySelector('#jsprice')
+    let items = list.querySelectorAll('.item')
+    items.forEach((item) => {
+      let dollarPrice = item.querySelector('.dollar').innerHTML.replace(' $', '')
+      let rublItem = item.querySelector('.rubl')
+      let rublPrice = Math.ceil(dollarPrice*dollar)
+      var length = Math.log(rublPrice) * Math.LOG10E + 1 | 0
+      if (length >= 5) {
+        rublPrice = rublPrice.toString().slice(0, 2) + ' ' + rublPrice.toString().slice(2, rublPrice.length)
+      }
+      rublItem.innerHTML = `~${rublPrice} руб`
+    })
+
+  })
+}
+
 toggleAccordeon()
 calculateValues()
+calculatePricesDollar()
 
 var scroll = new SmoothScroll('a[href*="#"]', {
     speed: 900,
