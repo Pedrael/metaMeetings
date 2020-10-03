@@ -65,6 +65,9 @@ function calculatePricesDollar() {
       let dollarPrice = item.querySelector('.dollar').innerHTML.replace(' $', '')
       let rublItem = item.querySelector('.rubl')
       let rublPrice = Math.ceil(dollarPrice*dollar)
+      while( rublPrice % 100 != 0) {
+        rublPrice++
+      }
       var length = Math.log(rublPrice) * Math.LOG10E + 1 | 0
       if (length >= 5) {
         rublPrice = rublPrice.toString().slice(0, 2) + ' ' + rublPrice.toString().slice(2, rublPrice.length)
