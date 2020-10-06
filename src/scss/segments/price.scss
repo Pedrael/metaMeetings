@@ -1,5 +1,5 @@
 #price {
-  @include margin-padding(('p-t': (65, 0.5), 'p-b': (85, 0.5) ));
+  @include margin-padding(('p-t': (65, 0.5), 'p-b': (35, 0.5) ));
   background-image: url('../img/price/l.png'), url('../img/price/r.png');
   background-repeat: no-repeat, no-repeat;
   background-position: left center, right center;
@@ -26,12 +26,12 @@
   }
 
   .price-list {
-    @include width(850, 0.5);
+    @include width(850, 0.5, desktop-small);
     max-width: 80vw;
     @include margin-padding(('m-t': (55, 0.5) ));
 
     .item {
-      @include width(227, 0.2);
+      @include width(227, 0.2, desktop-small);
       @include min-height(236, 0.2);
       @include border-radius(5);
       background: #fff;
@@ -57,6 +57,14 @@
         @include margin-padding(('m-b': (30, 0.2) ));
       }
     }
+  }
+
+  .sub-text {
+    text-align: center;
+    @include FontLineSize(0.1, 0.1, 0.8, 13, 7);
+    @include width(850, 0.5);
+    max-width: 80vw;
+    @include margin-padding(('m-t': (35, 0.5) ));
   }
 }
 
